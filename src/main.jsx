@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import HomeClock from './component/HomeClock'
+import HomeClock from './component/homeclock/HomeClock'
 import './index.css'
+import Productor from './component/productor/Productor'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HomeClock/>
+    {/* <HomeClock/> */}
+    <Productor/>
   </React.StrictMode>
 )
