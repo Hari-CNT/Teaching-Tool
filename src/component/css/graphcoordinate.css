@@ -1,0 +1,158 @@
+.graph-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  /* background-color: #f5f5f5; */
+}
+
+.graph-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #333;
+  background-color: white;
+}
+
+.axis {
+  position: absolute;
+  background-color: #333;
+  z-index: 2;
+}
+
+.x-axis {
+  width: 100%;
+  height: 2px;
+  bottom: 50px;
+  left: 0;
+}
+
+.y-axis {
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: 50px;
+}
+
+.grid-line {
+  position: absolute;
+  background-color: #eee;
+  z-index: 1;
+}
+
+.x-grid {
+  width: 100%;
+  height: 1px;
+}
+
+.y-grid {
+  width: 1px;
+  height: 100%;
+  top: 0;
+}
+
+.tick {
+  position: absolute;
+  background-color: #333;
+  z-index: 0;
+}
+
+.x-tick {
+  width: 2px;
+  height: 10px;
+  bottom: 50px;
+}
+
+.y-tick {
+  width: 10px;
+  height: 2px;
+  left: 50px;
+}
+
+.tick-label {
+  position: absolute;
+  font-size: 12px;
+  color: #333;
+  z-index: 2;
+}
+
+.x-label {
+  bottom: 30px;
+  transform: translateX(-50%);
+}
+
+.y-label {
+  left: 30px;
+  transform: translateY(-50%);
+}
+
+.point {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 3;
+  margin-top: -11px;
+  margin-left: -10px;
+}
+
+.point-label {
+  /* position: absolute;
+  font-size: 14px;
+  color: blue;
+  z-index: 3; */
+  position: absolute;
+    font-size: 14px;
+    color: blue;
+    z-index: 2;
+    background: green;
+    border-radius: 50%;
+    color: white;
+    padding: 2px;
+}
+
+/* .coordinates-display {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 14px;
+  color: #333;
+  z-index: 3;
+} */
+.btn-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.error-message {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: red;
+  font-size: 14px;
+  z-index: 3;
+}
+
+.graph-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.undo-btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  z-index: 4;
+}
+
+.undo-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
